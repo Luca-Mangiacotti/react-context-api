@@ -15,21 +15,26 @@ import PageNotFound from "./pages/PageNotFound";
 //Admin Pages
 import Login from "./pages/Admin/Login";
 
+//Contexts
+import { AlertProvider } from "./contexts/AlertContext";
+
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<DefaultLayout />}>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/menu/:id" element={<Pizza />} />
-          <Route path="/about-us" element={<AboutUS />} />
-        </Route>
-        <Route element={<LogLayout />}>
-          <Route path="/login" element={<Login />} />
-        </Route>
-        <Route path="/*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <AlertProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/menu/:id" element={<Pizza />} />
+            <Route path="/about-us" element={<AboutUS />} />
+          </Route>
+          <Route element={<LogLayout />}>
+            <Route path="/login" element={<Login />} />
+          </Route>
+          <Route path="/*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </AlertProvider>
   );
 }
