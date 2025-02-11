@@ -15,8 +15,16 @@ export default function Alert() {
 
   if (!message) return null;
   return (
-    <div className={types[type]}>
-      {message} <button onClick={handleAlertClose}>X</button>
+    <div
+      className={`flex justify-between items-center p-4 mx-5${types[type]} `}
+    >
+      {message}{" "}
+      <button
+        className="px-1 hover:not-focus:bg-red-600"
+        onClick={handleAlertClose}
+      >
+        X
+      </button>
     </div>
   );
 }

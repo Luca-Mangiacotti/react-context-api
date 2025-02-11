@@ -6,7 +6,8 @@ export default function AboutUS() {
   useEffect(() => {
     setAlertData({
       type: "info",
-      message: "buoni sconto 50%",
+      message:
+        "servizio clienti in ascolto tutti i giorni dalle 8 alle 20 tranne sabato e domenica ",
     });
   }, [setAlertData]);
 
