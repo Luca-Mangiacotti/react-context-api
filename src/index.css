@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/*----------------------
+        GENERAL SETS        
+-----------------------*/
+
+body {
+  background-color: #c9ae2a;
+}
+
+/*----------------------
+         TYPO        
+-----------------------*/
+body {
+  font-family: "Mynerve", serif;
+  font-weight: 300;
+}
