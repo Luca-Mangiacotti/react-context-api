@@ -23,7 +23,7 @@ export default function Login() {
     //simulazione di login con un if
     if (formData.username === "Luca" && formData.password === "password") {
       console.log("accesso riuscito");
-      navigate("/");
+      navigate("/dashboard");
     } else {
       console.log("accesso negato");
     }

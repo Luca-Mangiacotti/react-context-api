@@ -14,6 +14,7 @@ import PageNotFound from "./pages/PageNotFound";
 
 //Admin Pages
 import Login from "./pages/Admin/Login";
+import Dashboard from "./pages/Admin/Dashboard";
 
 //Contexts
 import { AlertProvider } from "./contexts/AlertContext";
@@ -32,6 +33,7 @@ export default function App() {
           <Route element={<LogLayout />}>
             <Route path="/login" element={<Login />} />
           </Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
